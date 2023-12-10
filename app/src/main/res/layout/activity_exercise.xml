@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExerciseActivity">
+
+        <TextView
+            android:id="@+id/weakness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textSize="24dp"
+            android:textFontWeight="@integer/material_motion_duration_medium_2"
+            android:textColor="@color/black"
+            android:paddingHorizontal="16dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="54dp"
+            android:text="Improve"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/physical_measures_btn"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/physical_measures_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Physics measures"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:paddingHorizontal="36dp"
+            android:paddingVertical="12dp"
+            app:rippleColor="#e5e5e5"
+            android:layout_gravity="center" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/physical_exercise_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/physical_measures_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Physics exercises"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:paddingHorizontal="36dp"
+        android:paddingVertical="12dp"
+        app:rippleColor="#e5e5e5"
+        android:layout_gravity="center" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
