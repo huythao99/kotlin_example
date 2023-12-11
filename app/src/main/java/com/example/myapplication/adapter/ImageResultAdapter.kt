@@ -7,12 +7,16 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.OverlayView
 import com.example.myapplication.R
 import com.example.myapplication.models.ImageResult
 import com.google.android.material.button.MaterialButton
 import com.squareup.picasso.Picasso
 
-class ImageResultAdapter(private val list: Array<ImageResult>, private val onClick: () -> Unit) : RecyclerView.Adapter<ImageResultAdapter.ImageResultViewHolder>() {
+class ImageResultAdapter(
+    private val list: Array<ImageResult>,
+    private val onClick: () -> Unit
+) : RecyclerView.Adapter<ImageResultAdapter.ImageResultViewHolder>() {
 
     class ImageResultViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         // Find all the views of the list item
@@ -22,6 +26,7 @@ class ImageResultAdapter(private val list: Array<ImageResult>, private val onCli
         private val imageResult: ImageView = itemView.findViewById(R.id.image_result)
         private val indicator: TextView = itemView.findViewById(R.id.indicator)
         private val btn: MaterialButton = itemView.findViewById(R.id.exercise_btn)
+        private val overlay: OverlayView = itemView.findViewById(R.id.overlay);
 
         // Show the data in the views
         fun bind(repo: ImageResult, position: Int, maxNum: Int, onClick: () -> Unit) {
@@ -32,8 +37,9 @@ class ImageResultAdapter(private val list: Array<ImageResult>, private val onCli
             advantage.text = "Posture: $advantageDes"
             weakness.text = "Weakness: $weaknessDes"
             posture.text = "Posture:$postureDes"
-            Picasso.get().load(uri).into(imageResult)
+            Picasso.get().load(uri).rotate(90f).into(imageResult)
             indicator.text = "${position + 1} / $maxNum"
+            overlay.setResults(repo.result, repo.height, repo.width)
             if (position == maxNum - 1) {
                 btn.visibility = View.VISIBLE
                 btn.setOnClickListener {

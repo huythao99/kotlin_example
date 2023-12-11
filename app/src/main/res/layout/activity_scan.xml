@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ScanActivity">
 
+    <!-- Scanning -->
     <LinearLayout
         android:id="@+id/loading_content"
         android:layout_width="wrap_content"
@@ -40,6 +41,7 @@
             app:trackColor="#0c81de" />
     </LinearLayout>
 
+    <!-- Scan success -->
     <LinearLayout
         android:id="@+id/result_content"
         android:layout_width="wrap_content"
