@@ -22,10 +22,7 @@ class PoseLandmarkerHelper(
     var minPosePresenceConfidence: Float = DEFAULT_POSE_PRESENCE_CONFIDENCE,
     var currentModel: Int = MODEL_POSE_LANDMARKER_FULL,
     var currentDelegate: Int = DELEGATE_GPU,
-    var runningMode: RunningMode = RunningMode.IMAGE,
     val context: Context,
-    // this listener is only used when running in RunningMode.LIVE_STREAM
-    val poseLandmarkerHelperListener: LandmarkerListener? = null
 ) {
 
     // For this example this needs to be a var so it can be reset on changes.
@@ -39,11 +36,6 @@ class PoseLandmarkerHelper(
     fun clearPoseLandmarker() {
         poseLandmarker?.close()
         poseLandmarker = null
-    }
-
-    // Return running status of PoseLandmarkerHelper
-    fun isClose(): Boolean {
-        return poseLandmarker == null
     }
 
     // Initialize the Pose landmarker using current settings on the
@@ -78,27 +70,18 @@ class PoseLandmarkerHelper(
                     .setMinPoseDetectionConfidence(minPoseDetectionConfidence)
                     .setMinTrackingConfidence(minPoseTrackingConfidence)
                     .setMinPosePresenceConfidence(minPosePresenceConfidence)
-                    .setRunningMode(runningMode)
+                    .setRunningMode(RunningMode.IMAGE)
 
             val options = optionsBuilder.build()
             poseLandmarker =
                 PoseLandmarker.createFromOptions(context, options)
 
         } catch (e: IllegalStateException) {
-            poseLandmarkerHelperListener?.onError(
-                "Pose Landmarker failed to initialize. See error logs for " +
-                        "details"
-            )
             Log.e(
                 TAG, "MediaPipe failed to load the task with error: " + e
                     .message
             )
         } catch (e: RuntimeException) {
-            // This occurs if the model being used does not support GPU
-            poseLandmarkerHelperListener?.onError(
-                "Pose Landmarker failed to initialize. See error logs for " +
-                        "details", GPU_ERROR
-            )
             Log.e(
                 TAG,
                 "Image classifier failed to load model with error: " + e.message
@@ -106,25 +89,9 @@ class PoseLandmarkerHelper(
         }
     }
 
-    // Run pose landmark using MediaPipe Pose Landmarker API
-    @VisibleForTesting
-    fun detectAsync(mpImage: MPImage, frameTime: Long) {
-        poseLandmarker?.detectAsync(mpImage, frameTime)
-        // As we're using running mode LIVE_STREAM, the landmark result will
-        // be returned in returnLivestreamResult function
-    }
-
     // Accepted a Bitmap and runs pose landmarker inference on it to return
     // results back to the caller
     fun detectImage(image: Bitmap): ResultBundle? {
-        if (runningMode != RunningMode.IMAGE) {
-            throw IllegalArgumentException(
-                "Attempting to call detectImage" +
-                        " while not using RunningMode.IMAGE"
-            )
-        }
-
-
         // Inference time is the difference between the system time at the
         // start and finish of the process
         val startTime = SystemClock.uptimeMillis()
@@ -145,9 +112,6 @@ class PoseLandmarkerHelper(
 
         // If poseLandmarker?.detect() returns null, this is likely an error. Returning null
         // to indicate this.
-        poseLandmarkerHelperListener?.onError(
-            "Pose Landmarker failed to detect."
-        )
         return null
     }
 
@@ -174,8 +138,4 @@ class PoseLandmarkerHelper(
         val inputImageWidth: Int,
     )
 
-    interface LandmarkerListener {
-        fun onError(error: String, errorCode: Int = OTHER_ERROR)
-        fun onResults(resultBundle: ResultBundle)
-    }
 }

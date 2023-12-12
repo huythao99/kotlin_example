@@ -37,7 +37,7 @@ class ImageResultAdapter(
             advantage.text = "Posture: $advantageDes"
             weakness.text = "Weakness: $weaknessDes"
             posture.text = "Posture:$postureDes"
-            Picasso.get().load(uri).rotate(90f).into(imageResult)
+            Picasso.get().load(uri).into(imageResult)
             indicator.text = "${position + 1} / $maxNum"
             overlay.setResults(repo.result, repo.height, repo.width)
             if (position == maxNum - 1) {

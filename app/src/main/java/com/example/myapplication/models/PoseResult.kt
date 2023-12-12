@@ -9,6 +9,7 @@ class PoseResult() : Parcelable {
     var normalizedPointsY: FloatArray = FloatArray(33)
     var worldPointsX: FloatArray = FloatArray(33)
     var worldPointsY: FloatArray = FloatArray(33)
+    var worldPointsZ: FloatArray = FloatArray(33)
 
     constructor (poseLandmarkerResult: PoseLandmarkerResult) : this() {
         // Get normalize points
@@ -25,6 +26,7 @@ class PoseResult() : Parcelable {
             for((i, worldLandmark) in landmark.withIndex()) {
                 worldPointsX[i] = worldLandmark.x()
                 worldPointsY[i] = worldLandmark.y()
+                worldPointsZ[i] = worldLandmark.z()
             }
             break // only care first landmark (mediapipe may return many landmarks in one image)
         }
