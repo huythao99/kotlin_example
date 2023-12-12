@@ -5,6 +5,7 @@ import android.os.Parcelable
 
 class ImageResult(
     val uri: String,
+    val classIdx: Int,
     val posture: String,
     val advantage: String,
     val weakness: String,
@@ -14,6 +15,7 @@ class ImageResult(
 ) : Parcelable {
     private constructor(parcel: Parcel) : this(
         uri = parcel.readString()!!,
+        classIdx = parcel.readInt(),
         posture = parcel.readString()!!,
         advantage = parcel.readString()!!,
         weakness = parcel.readString()!!,
@@ -24,6 +26,7 @@ class ImageResult(
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(uri)
+        parcel.writeInt(classIdx)
         parcel.writeString(posture)
         parcel.writeString(advantage)
         parcel.writeString(weakness)

@@ -33,14 +33,15 @@ class ResultActivity : AppCompatActivity() {
             Log.d("PARAMS_URI", results[0].uri);
         }
         resultAdapter = ImageResultAdapter(results) {
-            onShowExercise()
+            onShowExercise(results[0].classIdx)
         };
         binding.listView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.listView.adapter = resultAdapter;
     }
 
-    private fun onShowExercise() {
+    private fun onShowExercise(classIdx: Int) {
         val intent = Intent(this, ExerciseActivity::class.java);
+        intent.putExtra("classIdx", classIdx)
         startActivity(intent)
     }
 }

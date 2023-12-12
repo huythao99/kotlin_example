@@ -89,6 +89,7 @@ class ScanActivity : AppCompatActivity() {
             val sleepingPoseResult = sleepingPoseClassifier.classify(poseResult)
             results[i] = ImageResult(
                 uri.toString(),
+                sleepingPoseResult.classIdx,
                 sleepingPoseResult.classname,
                 sleepingPoseResult.advantage,
                 sleepingPoseResult.disadvantage,

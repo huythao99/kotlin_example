@@ -5,71 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PhysicalMeasuresActivity">
-
-    <LinearLayout
-        android:id="@+id/complete_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+    <ScrollView
+        android:layout_height="0dp"
+        android:layout_width="0dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingBottom="50dp"
-        android:animateLayoutChanges="true"
         >
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/complete_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Physical Measure"
-            android:textSize="28sp"
-            android:layout_marginBottom="18dp"
-            android:textColor="#000000"
-            android:textAlignment="center"
-            android:paddingHorizontal="16dp"
-            android:layout_gravity="center"
-            />
-        <TextView
-            android:id="@+id/steps"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Steps:"
-            android:textSize="28sp"
-            android:layout_marginBottom="18dp"
-            android:textColor="#000000"
-            android:textAlignment="center"
-            android:paddingHorizontal="16dp"
-            />
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Result:"
-            android:textSize="28sp"
-            android:layout_marginBottom="18dp"
-            android:textColor="#000000"
-            android:textAlignment="center"
-            android:paddingHorizontal="16dp"
-            />
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/complete_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:orientation="vertical"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Complete"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/white"
-            android:paddingHorizontal="36dp"
-            android:paddingVertical="12dp"
-            app:rippleColor="#e5e5e5"
-            android:layout_gravity="center"
-            />
+            android:paddingBottom="50dp"
+            android:animateLayoutChanges="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biện pháp vật lý"
+                android:textSize="28sp"
+                android:layout_marginBottom="18dp"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:paddingHorizontal="16dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:id="@+id/steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/posture_0_advantage"
+                android:textSize="20sp"
+                android:layout_marginBottom="18dp"
+                android:textColor="#000000"
+                android:justificationMode="inter_word"
+                android:paddingHorizontal="16dp"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/complete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Hoàn thành"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:paddingHorizontal="36dp"
+                android:paddingVertical="12dp"
+                app:rippleColor="#e5e5e5"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

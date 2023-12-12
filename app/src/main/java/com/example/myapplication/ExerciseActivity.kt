@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityExerciseBinding
+import com.example.myapplication.models.ImageResult
 
 class ExerciseActivity : AppCompatActivity() {
 
@@ -12,25 +13,29 @@ class ExerciseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val classIdx = intent.extras?.getInt("classIdx")!!
+
         binding = ActivityExerciseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.physicalExerciseBtn.setOnClickListener {
-            onShowPhysicalExercise()
+            onShowPhysicalExercise(classIdx)
         }
 
         binding.physicalMeasuresBtn.setOnClickListener {
-            onShowPhysicalMeasure()
+            onShowPhysicalMeasure(classIdx)
         }
     }
 
-    private fun onShowPhysicalExercise() {
+    private fun onShowPhysicalExercise(classIdx: Int) {
         val intent = Intent(this, PhysicalExerciseActivity::class.java);
+        intent.putExtra("classIdx", classIdx)
         startActivity(intent)
     }
 
-    private fun onShowPhysicalMeasure() {
+    private fun onShowPhysicalMeasure(classIdx: Int) {
         val intent = Intent(this, PhysicalMeasuresActivity::class.java);
+        intent.putExtra("classIdx", classIdx)
         startActivity(intent)
     }
 }

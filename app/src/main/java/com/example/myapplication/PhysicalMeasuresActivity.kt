@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityPhysicalMeasuresBinding
+import com.example.myapplication.models.SleepingPoseResult
 
 class PhysicalMeasuresActivity : AppCompatActivity() {
 
@@ -14,11 +15,13 @@ class PhysicalMeasuresActivity : AppCompatActivity() {
 
         binding = ActivityPhysicalMeasuresBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        val classIdx = intent.extras?.getInt("classIdx")!!
+        val sleepingPoseResult = SleepingPoseResult(this)
+        sleepingPoseResult.setClass(classIdx)
         binding.completeBtn.setOnClickListener {
             navigateToComplete()
         }
-
+        binding.steps.text = sleepingPoseResult.physicalMeasure
     }
 
     private fun navigateToComplete() {

@@ -17,19 +17,36 @@
     <string name="posture_0_name">Thai nhi</string>
     <string name="posture_0_advantage">Đây là một trong những tư thế ngủ tốt cho phụ nữ mang thai. Tư thế này có thể giảm đáng kể tình trạng ngủ ngáy. Đặc biệt, tư thế “thai nhi” nghiêng về bên trái sẽ hạn chế trào ngược axit ở dạ dày.</string>
     <string name="posture_0_disadvantage">Tuy tư thế này tạo cảm giác thoải mái khi ngủ nhưng nó có thể gây ra nhiều áp lực ở cổ và lưng, dẫn đến chứng đau cổ, lưng. Ngoài ra, việc cuộn người khi ngủ sẽ làm căng khớp, lưng đồng thời dẫn tới một số vấn đề khác như khó thở, xệ ngực, xuất hiện nếp nhăn…</string>
+    <string name="posture_0_physical_measure">Bạn nên kê một chiếc gối dày và cao để giữ đầu ở vị trí phù hợp. Điều này sẽ giúp giảm căng thẳng lên cổ, tránh đau cơ và cứng khớp. Thêm vào đó, tư thế “thai nhi” phía bên trái dễ gây áp lực lên gan, phổi và dạ dày. Vì vậy, bạn nên ngủ ở tư thế này và nghiêng về bên phải.</string>
+    <string name="posture_0_video_link">TSPBdCFNgAo</string>
+
     <string name="posture_1_name">Người mới</string>
     <string name="posture_1_advantage">Vị trí này giữ cho cổ và lưng của bạn thẳng hàng, đây là vị trí lý tưởng cho những ai mắc các chứng bệnh mãn tính như: đau lưng, đau cổ,… và giúp hỗ trợ lưng của bạn định hình theo những đường cong tự nhiên của cột sống, giữ cột sống của bạn thẳng trong thời gian dài.</string>
     <string name="posture_1_disadvantage">gây ra các hiện tượng tê tay, hoặc đau cổ, vai gáy. </string>
+    <string name="posture_1_physical_measure">Đặt thêm gối dưới cánh tay hoặc ôm một chiếc gối trong lúc ngủ. Và tham khảo các bài tập vật lí theo chuyên gia</string>
+    <string name="posture_1_video_link">0HHlo-Nd3tM</string>
+
     <string name="posture_2_name">Đăng nhập</string>
     <string name="posture_2_advantage">Tư thế này giúp ngăn ngừa đau cổ và lưng, giảm ngủ ngáy, hạn chế ợ nóng, trào ngược axit và tạo ra giấc ngủ sâu hơn. Bên cạnh đó, kiểu ngủ này còn cho phép não thanh lọc chất độc hiệu quả hơn, từ đó giảm thiểu các rối loạn não bộ như bệnh Alzheimer và Parkinson.</string>
     <string name="posture_2_disadvantage">Việc ngủ nghiêng sẽ cản trở sự lưu thông máu, gây áp lực lên dây thần kinh và các nội quan như gan, phổi, dạ dày… đồng thời làm đau vai và cánh tay. Nếu nằm ngủ ở tư thế này một thời gian dài, chúng ta có nguy cơ bị xệ ngực và lão hóa sớm (do da mặt bị đè xuống gối).</string>
+    <string name="posture_2_physical_measure">Bạn nên chọn gối làm bằng vải satin để tránh tạo ra nếp nhăn trên khuôn mặt. Để hỗ trợ chân trên, bạn hãy đặt gối giữa hai đầu gối. Và thực hiện theo các bài tập sau để làm giảm đau vai:</string>
+    <string name="posture_2_video_link">cgpDtsidRQw</string>
+
     <string name="posture_3_name">Người lính</string>
     <string name="posture_3_advantage">giúp lưng và cổ thằng hàng, làm giảm nguy cơ xuất hiện các nếp nhăn sớm và cho phép trọng lượng của bạn được phân bổ đều mà không gây thêm áp lực lên vai hoặc cột sống, ngăn ngừa các triệu chứng trào ngược axit.</string>
     <string name="posture_3_disadvantage">nằm ngửa làm hạn chế quá trình hoạt động của đường thở vì lưỡi nằm ở phía sau cổ họng => gia tăng tình trạng ngáy.</string>
+    <string name="posture_3_physical_measure">kẹp một chiếc gối ở giữa hai chân khi ngủ để phần hông được thư giãn tốt nhất để hạn chế tình trạng này. Hoặc thực hiện các bài tập như hút lưỡi (để vòm miệng hút lưỡi cho đến khi không còn khoảng trống hay không khí ở giữa); trượt lưỡi (đặt đầu lưỡi ở phía sau răng cửa và trượt tất cả về phía cổ họng) hay thảm lưỡi (đặt lưỡi vào mặt sau của hàm dưới, sau đó đặt lưỡi xuống đáy miệng như một tấm thảm trong khi giữ nó tiếp xúc với răng)… hàng ngày để cải thiện dần chứng ngủ ngáy.</string>
+    <string name="posture_3_video_link">k8fYZkLy3TI</string>
+
     <string name="posture_4_name">Rơi tự do</string>
     <string name="posture_4_advantage">Tư thế ngủ nằm sấp khiến đường thở trở nên rộng mở hơn, do đó giảm ngáy hiệu quả.</string>
     <string name="posture_4_disadvantage">Đây là tư thế ngủ tệ nhất vì nó tạo ra nhiều áp lực lên cột sống của chúng ta. Việc nằm sấp không hỗ trợ các đường cong tự nhiên của cột sống đồng thời gây thêm áp lực cho phần thắt lưng cũng như cơ bắp và các khớp khác, dễ dẫn đến đau nhức hoặc tê liệt. Đồng thời duy trì kiểu ngủ này lâu dài có thể ảnh hưởng tiêu cực đến hệ tiêu hóa. Bên cạnh đó, nghiêng đầu về một bên hoặc úp mặt xuống gối sẽ gây căng cổ, hạn chế hô hấp và cản trở máu lưu thông. Do đó, tư thế này không phù hợp cho những người đau cổ và lưng. Ngoài ra, kiểu ngủ này còn khiến phổi bị chèn ép cũng như làm chúng ta đau cứng cổ khi thức dậy.</string>
+    <string name="posture_4_physical_measure">Nằm nghiêng và đặt một chiếc gối giữa bụng và nệm. </string>
+    <string name="posture_4_video_link">AK3vdVFekLI</string>
+
     <string name="posture_5_name">Sao biển</string>
     <string name="posture_5_advantage">Đây là tư thế ngủ tốt nhất cho cổ và cột sống bởi nó ít gây áp lực lên 2 bộ phận này. Bên cạnh đó, vì vị trí đầu được nâng cao so với dạ dày nên tư thế này giúp hạn chế sự trào ngược dạ dày. Ngoài ra, nó cũng ngăn ngừa các nếp nhăn trên da.</string>
     <string name="posture_5_disadvantage">Tư thế này có thể dẫn đến hiện tượng ngáy khi ngủ. Thêm vào đó, việc nâng cánh tay lên cao hơn đầu có thể gây đau vai.</string>
+    <string name="posture_5_physical_measure">Để đầu, cổ và xương sống được thư giãn hoàn toàn, bạn không nên sử dụng gối khi ngủ ở tư thế này. Thay đổi tư thế sang tư thế nằm nghiêng để giảm tình trạng ngáy.</string>
+    <string name="posture_5_video_link">cgpDtsidRQw</string>
 </resources>

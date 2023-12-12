@@ -34,9 +34,9 @@ class ImageResultAdapter(
             val weaknessDes = repo.weakness
             val postureDes = repo.posture
             val uri = Uri.parse(repo.uri)
-            advantage.text = "Posture: $advantageDes"
-            weakness.text = "Weakness: $weaknessDes"
-            posture.text = "Posture:$postureDes"
+            advantage.text = "Ưu điểm: $advantageDes"
+            weakness.text = "Nhược điểm: $weaknessDes"
+            posture.text = "Tư thế:$postureDes"
             Picasso.get().load(uri).into(imageResult)
             indicator.text = "${position + 1} / $maxNum"
             overlay.setResults(repo.result, repo.height, repo.width)

@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityPhysicalExerciseBinding
+import com.example.myapplication.models.SleepingPoseResult
 
 class PhysicalExerciseActivity : AppCompatActivity() {
 
@@ -16,8 +17,11 @@ class PhysicalExerciseActivity : AppCompatActivity() {
 
         binding = ActivityPhysicalExerciseBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val classIdx = intent.extras?.getInt("classIdx")!!
+        val sleepingPoseResult = SleepingPoseResult(this)
+        sleepingPoseResult.setClass(classIdx)
         binding.exerciseBtn.setOnClickListener {
-            openYoutubeLink(linkId)
+            openYoutubeLink(sleepingPoseResult.youtubeID)
         }
 
         binding.completeBtn.setOnClickListener {
@@ -39,9 +43,5 @@ class PhysicalExerciseActivity : AppCompatActivity() {
     private fun navigateToComplete() {
         val intent = Intent(this, CompleteActivity::class.java)
         startActivity(intent)
-    }
-
-    companion object {
-        const val linkId = "OhqtsoT7Cv8"
     }
 }

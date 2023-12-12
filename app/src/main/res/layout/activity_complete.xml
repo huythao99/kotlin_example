@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This is the end of the exercise"
+            android:text="Bài tập đến đây là kết thúc"
             android:textSize="28sp"
             android:layout_marginBottom="18dp"
             android:textColor="#000000"
@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Good luck"
+            android:text="Chúc bạn thành công"
             android:textSize="28sp"
             android:layout_marginBottom="18dp"
             android:textColor="#000000"
@@ -47,7 +47,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Back to home"
+            android:text="Quay lại"
             android:textAllCaps="false"
             android:textSize="20sp"
             android:textColor="@color/black"
